@@ -1,0 +1,11 @@
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\bin\Debug\2212366_DeskTop_Lab7.exe.config
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\bin\Debug\2212366_DeskTop_Lab7.exe
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\bin\Debug\2212366_DeskTop_Lab7.pdb
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\2212366_DeskTop_Lab7.csproj.AssemblyReference.cache
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\_2212366_DeskTop_Lab7.Form1.resources
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\_2212366_DeskTop_Lab7.Properties.Resources.resources
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\2212366_DeskTop_Lab7.csproj.GenerateResource.cache
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\2212366_DeskTop_Lab7.csproj.CoreCompileInputs.cache
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\2212366_DeskTop_Lab7.exe
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\2212366_DeskTop_Lab7.pdb
+C:\Users\PC602\Downloads\2212366_DeskTop_Lab7\obj\Debug\_2212366_DeskTop_Lab7.fOODInfoForm.resources
