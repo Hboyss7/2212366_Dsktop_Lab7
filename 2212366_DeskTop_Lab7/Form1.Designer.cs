@@ -32,16 +32,18 @@
             this.cbbCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFoodList = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblCatName = new System.Windows.Forms.Label();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmCalculateQuantity = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSeperator = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAddFood = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUpdateFood = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCatName = new System.Windows.Forms.Label();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSearchByName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +51,7 @@
             // cbbCategory
             // 
             this.cbbCategory.FormattingEnabled = true;
-            this.cbbCategory.Location = new System.Drawing.Point(194, 27);
+            this.cbbCategory.Location = new System.Drawing.Point(148, 32);
             this.cbbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(301, 24);
@@ -59,7 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 30);
+            this.label1.Location = new System.Drawing.Point(13, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 16);
@@ -74,14 +76,51 @@
             this.dgvFoodList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvFoodList.MultiSelect = false;
             this.dgvFoodList.Name = "dgvFoodList";
-            this.dgvFoodList.Size = new System.Drawing.Size(619, 406);
+            this.dgvFoodList.Size = new System.Drawing.Size(856, 406);
             this.dgvFoodList.TabIndex = 2;
             this.dgvFoodList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFoodList_CellContentClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmCalculateQuantity,
+            this.tsmSeperator,
+            this.tsmAddFood,
+            this.tsmUpdateFood});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 92);
+            // 
+            // tsmCalculateQuantity
+            // 
+            this.tsmCalculateQuantity.Name = "tsmCalculateQuantity";
+            this.tsmCalculateQuantity.Size = new System.Drawing.Size(169, 22);
+            this.tsmCalculateQuantity.Text = "CalculateQuantity";
+            this.tsmCalculateQuantity.Click += new System.EventHandler(this.tsmCalculateQuantity_Click);
+            // 
+            // tsmSeperator
+            // 
+            this.tsmSeperator.Name = "tsmSeperator";
+            this.tsmSeperator.Size = new System.Drawing.Size(169, 22);
+            this.tsmSeperator.Text = "Seperator";
+            // 
+            // tsmAddFood
+            // 
+            this.tsmAddFood.Name = "tsmAddFood";
+            this.tsmAddFood.Size = new System.Drawing.Size(169, 22);
+            this.tsmAddFood.Text = "AddFood";
+            this.tsmAddFood.Click += new System.EventHandler(this.tsmAddFood_Click);
+            // 
+            // tsmUpdateFood
+            // 
+            this.tsmUpdateFood.Name = "tsmUpdateFood";
+            this.tsmUpdateFood.Size = new System.Drawing.Size(169, 22);
+            this.tsmUpdateFood.Text = "UpdateFood";
+            this.tsmUpdateFood.Click += new System.EventHandler(this.tsmUpdateFood_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 522);
+            this.label2.Location = new System.Drawing.Point(13, 510);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
@@ -91,7 +130,7 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(91, 522);
+            this.lblQuantity.Location = new System.Drawing.Point(91, 510);
             this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(16, 16);
@@ -101,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(135, 522);
+            this.label4.Location = new System.Drawing.Point(135, 510);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 16);
@@ -111,7 +150,7 @@
             // lblCatName
             // 
             this.lblCatName.AutoSize = true;
-            this.lblCatName.Location = new System.Drawing.Point(265, 522);
+            this.lblCatName.Location = new System.Drawing.Point(265, 510);
             this.lblCatName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCatName.Name = "lblCatName";
             this.lblCatName.Size = new System.Drawing.Size(16, 16);
@@ -123,48 +162,30 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 19);
             // 
-            // contextMenuStrip1
+            // label3
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmCalculateQuantity,
-            this.tsmSeperator,
-            this.tsmAddFood,
-            this.tsmUpdateFood});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(467, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Tìm kiếm theo tên:";
             // 
-            // tsmCalculateQuantity
+            // txtSearchByName
             // 
-            this.tsmCalculateQuantity.Name = "tsmCalculateQuantity";
-            this.tsmCalculateQuantity.Size = new System.Drawing.Size(180, 22);
-            this.tsmCalculateQuantity.Text = "CalculateQuantity";
-            this.tsmCalculateQuantity.Click += new System.EventHandler(this.tsmCalculateQuantity_Click);
-            // 
-            // tsmSeperator
-            // 
-            this.tsmSeperator.Name = "tsmSeperator";
-            this.tsmSeperator.Size = new System.Drawing.Size(180, 22);
-            this.tsmSeperator.Text = "Seperator";
-            // 
-            // tsmAddFood
-            // 
-            this.tsmAddFood.Name = "tsmAddFood";
-            this.tsmAddFood.Size = new System.Drawing.Size(180, 22);
-            this.tsmAddFood.Text = "AddFood";
-            this.tsmAddFood.Click += new System.EventHandler(this.tsmAddFood_Click);
-            // 
-            // tsmUpdateFood
-            // 
-            this.tsmUpdateFood.Name = "tsmUpdateFood";
-            this.tsmUpdateFood.Size = new System.Drawing.Size(180, 22);
-            this.tsmUpdateFood.Text = "UpdateFood";
-            this.tsmUpdateFood.Click += new System.EventHandler(this.tsmUpdateFood_Click);
+            this.txtSearchByName.Location = new System.Drawing.Point(588, 32);
+            this.txtSearchByName.Name = "txtSearchByName";
+            this.txtSearchByName.Size = new System.Drawing.Size(244, 22);
+            this.txtSearchByName.TabIndex = 8;
+            this.txtSearchByName.TextChanged += new System.EventHandler(this.txtSearchByName_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 554);
+            this.ClientSize = new System.Drawing.Size(863, 545);
+            this.Controls.Add(this.txtSearchByName);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCatName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblQuantity);
@@ -199,6 +220,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmSeperator;
         private System.Windows.Forms.ToolStripMenuItem tsmAddFood;
         private System.Windows.Forms.ToolStripMenuItem tsmUpdateFood;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSearchByName;
     }
 }
 

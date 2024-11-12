@@ -172,6 +172,20 @@ namespace _2212366_DeskTop_Lab7
             }
         }
 
-        
+        private void txtSearchByName_TextChanged(object sender, EventArgs e)
+        {
+            if (foodTable == null) return;
+            
+            string filterExpression = "Name like '%" + txtSearchByName.Text + "%'";
+            string softExpression = "Price DESC";
+
+            DataViewRowState rowStateFilter = DataViewRowState.OriginalRows;
+
+
+            DataView foodView = new DataView(foodTable, filterExpression, softExpression, rowStateFilter);
+
+            dgvFoodList.DataSource = foodView;
+            
+        }
     }
 }
